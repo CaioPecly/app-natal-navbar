@@ -2,8 +2,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './Home';
-import peru from './peru';
-import Pave from './Pave';
+import musicas from './musicas';
+import perfil from './perfil';
 
 const Stack = createStackNavigator();
 
@@ -12,8 +12,8 @@ export default function RotaBotao() {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="Home" component={Home} />
-                <Stack.Screen name="peru" component={peru} />
-                <Stack.Screen name="Pave" component={Pave} />
+                <Stack.Screen name="musicas" component={musicas} />
+                <Stack.Screen name="perfil" component={perfil} />
             </Stack.Navigator>
         </NavigationContainer>
     );

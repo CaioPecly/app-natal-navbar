@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 
-export default function peru() {
+export default function musicas() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Peru de Natal</Text>
@@ -36,7 +36,7 @@ export default function peru() {
         4. Deixe o peru descansar por 15 a 20 minutos antes de fatiar. Sirva acompanhado de farofa, arroz à grega e molho de frutas.
       </Text>
       <View>
-        <Image source={require('../assets/peru.jpg')} style={styles.img} />
+ 
       </View>
       <StatusBar style="auto" />
     </ScrollView>

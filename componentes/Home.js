@@ -1,22 +1,32 @@
+import React from 'react';
 import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons'; // Usando Ionicons para ícones de música
 
 export default function Home(props) {
     return (
         <ImageBackground 
-            source={require('../assets/fundo-natal.jpg')}  
+            source={require('../assets/music.jpg')}  
             style={estilo.container}  
         >
             <SafeAreaView style={estilo.safeContainer}>
-                <Text style={estilo.titulo}>Receitas de Natal</Text>
-                <Text style={estilo.texto}>Delícias para sua ceia de Natal.</Text>
+                <Text style={estilo.titulo}>Dev Music</Text>
+                <Text style={estilo.texto}>A Dev Music é uma plataforma inovadora que conecta desenvolvedores e amantes da música. Ela oferece ferramentas e recursos para criar, 
+                    compartilhar e explorar músicas de maneira interativa e colaborativa, unindo tecnologia e arte de forma única. 
+                    Ideal para quem busca inspiração ou deseja aprimorar suas habilidades musicais e tecnológicas.</Text>
+                
+                <Text style={estilo.bemVindo}></Text>
 
                 <View style={estilo.navbar}>
-                    <TouchableOpacity style={estilo.button} onPress={() => props.navigation.navigate('peru')}>
-                        <Text style={estilo.textButton}>Peru de Natal</Text>
+                    {/* Botão "Músicas" com o ícone de música */}
+                    <TouchableOpacity style={estilo.button} onPress={() => props.navigation.navigate('musicas')}>
+                        <Icon name="musical-note" size={20} color="#fff" /> {/* Ícone de música */}
+                        <Text style={estilo.textButton}>Músicas</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={estilo.button} onPress={() => props.navigation.navigate('Pave')}>
-                        <Text style={estilo.textButton}>Pavê de Natal</Text>
+                    {/* Botão "Meu Perfil" com o ícone de usuário */}
+                    <TouchableOpacity style={estilo.button} onPress={() => props.navigation.navigate('perfil')}>
+                        <Icon name="person" size={20} color="#fff" /> {/* Ícone de usuário */}
+                        <Text style={estilo.textButton}>Meu Perfil</Text>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>
@@ -44,8 +54,17 @@ const estilo = StyleSheet.create({
     texto: {
         fontSize: 18,
         color: '#FFF',  
-        textAlign: 'center',  
+        textAlign: 'justify',  
         marginBottom: 30,
+        fontWeight: 'bold',
+    },
+    bemVindo: {
+        fontSize: 20,
+        color: '#FFF',
+        textAlign: 'center',
+        marginBottom: 40,  
+        fontWeight: '600',
+        marginHorizontal: 20,
     },
     navbar: {
         position: 'absolute',
@@ -57,14 +76,19 @@ const estilo = StyleSheet.create({
         paddingHorizontal: 20,
     },
     button: {
-        padding: 15,
-        backgroundColor: '#388e3c',  
-        borderRadius: 10,
+        paddingVertical: 15,
+        paddingHorizontal: 20,
+        backgroundColor: '#f57c00',  
+        borderRadius: 30,  
         alignItems: 'center',
+        elevation: 5,  
+        flexDirection: 'row',  
+        justifyContent: 'center',
     },
     textButton: {
         fontSize: 18,
         color: '#fff',  
+        fontWeight: '500',  
+        marginLeft: 10,  
     },
 });
-

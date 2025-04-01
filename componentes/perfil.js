@@ -34,7 +34,7 @@ export default function Pave() {
         5. Finalize com o creme e decore com fios de chocolate derretido e frutas vermelhas. Deixe gelar por pelo menos 4 horas antes de servir.
       </Text>
       <View>
-        <Image source={require('../assets/pave.jpeg')} style={styles.img} />
+      
       </View>
       <StatusBar style="auto" />
     </ScrollView>
